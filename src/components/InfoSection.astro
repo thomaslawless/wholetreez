@@ -1,0 +1,53 @@
+<section class="info">
+  <div class="info-inner">
+    <div class="info-item">
+      <span class="info-label">Location</span>
+      <span class="info-value">New York, NY</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Hours</span>
+      <span class="info-value">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .info {
+    padding: 64px 24px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .info-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .info-item {
+    text-align: center;
+  }
+
+  .info-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-gray-dark);
+    margin-bottom: 8px;
+  }
+
+  .info-value {
+    font-size: 16px;
+    color: var(--color-black);
+  }
+
+  @media (max-width: 768px) {
+    .info-inner {
+      flex-direction: column;
+      gap: 32px;
+      align-items: center;
+    }
+  }
+</style>
