@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Message Sent">
+  <main class="success-page">
+    <h1>Message Sent</h1>
+    <p>Thanks for reaching out. We'll get back to you soon.</p>
+    <a href="/" class="back-link">Back to Home</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .success-page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 120px 24px;
+    text-align: center;
+  }
+
+  .success-page h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .success-page p {
+    font-size: 16px;
+    color: var(--color-gray);
+    margin-bottom: 32px;
+  }
+
+  .back-link {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+  }
+
+  .back-link:hover {
+    opacity: 0.8;
+  }
+</style>
