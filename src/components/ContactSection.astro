@@ -1,9 +1,29 @@
 <section class="contact">
   <div class="contact-inner">
     <h2 class="contact-heading">Get In Touch</h2>
-    <a href="mailto:info@wholetreez.com" class="contact-email">
-      info@wholetreez.com
-    </a>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      action="/success"
+      class="contact-form"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Name" required class="form-input" />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required class="form-input" />
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Message" required rows="5" class="form-input"></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message</button>
+    </form>
+    <p class="contact-alt">
+      Or email us directly at
+      <a href="mailto:info@wholetreez.com">info@wholetreez.com</a>
+    </p>
   </div>
 </section>
 
@@ -11,11 +31,10 @@
   .contact {
     padding: 80px 24px;
     background: var(--color-gray-light);
-    text-align: center;
   }
 
   .contact-inner {
-    max-width: var(--max-width);
+    max-width: 520px;
     margin: 0 auto;
   }
 
@@ -24,24 +43,74 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--color-gray);
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     font-weight: 400;
+    text-align: center;
   }
 
-  .contact-email {
-    font-size: 28px;
-    font-weight: 700;
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 1px solid #ddd;
+    background: var(--color-white);
     color: var(--color-black);
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-black);
+  }
+
+  .form-input::placeholder {
+    color: var(--color-gray-dark);
+  }
+
+  textarea.form-input {
+    resize: vertical;
+  }
+
+  .form-submit {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: center;
+  }
+
+  .form-submit:hover {
+    opacity: 0.8;
+  }
+
+  .contact-alt {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-gray);
+  }
+
+  .contact-alt a {
+    color: var(--color-black);
+    font-weight: 600;
     transition: opacity 0.2s;
   }
 
-  .contact-email:hover {
+  .contact-alt a:hover {
     opacity: 0.6;
-  }
-
-  @media (max-width: 768px) {
-    .contact-email {
-      font-size: 20px;
-    }
   }
 </style>
