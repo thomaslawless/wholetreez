@@ -1,0 +1,46 @@
+---
+interface Props {
+  name: string;
+  href: string;
+}
+
+const { name, href } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" class="coa-card">
+  <span class="coa-card-name">{name}</span>
+  <span class="coa-card-action">View COA &rarr;</span>
+</a>
+
+<style>
+  .coa-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .coa-card:hover {
+    border-color: var(--color-black);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .coa-card-name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .coa-card-action {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    transition: color 0.2s;
+  }
+
+  .coa-card:hover .coa-card-action {
+    color: var(--color-black);
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CoaCard from '../components/CoaCard.astro';
+---
+
+<BaseLayout title="Certificates of Analysis">
+  <main class="coa-page">
+    <div class="coa-header">
+      <h1>Certificates of Analysis</h1>
+      <p>Lab-tested results for full transparency. Click any product to view its COA.</p>
+    </div>
+
+    <section class="coa-brand">
+      <h2>WholeTreez</h2>
+      <p class="coming-soon">Coming soon</p>
+    </section>
+
+    <section class="coa-brand">
+      <h2>Super Dope</h2>
+      <div class="coa-grid">
+        <CoaCard name="Bubblegum Poppers" href="/coa/bubblegum-poppers.pdf" />
+        <CoaCard name="Lemon Poppers" href="/coa/lemon-poppers.pdf" />
+        <CoaCard name="Cherry Poppers" href="/coa/cherry-poppers.pdf" />
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .coa-page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  .coa-header {
+    margin-bottom: 64px;
+  }
+
+  .coa-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .coa-header p {
+    font-size: 16px;
+    color: var(--color-gray);
+  }
+
+  .coa-brand {
+    margin-bottom: 48px;
+  }
+
+  .coa-brand h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-black);
+  }
+
+  .coming-soon {
+    color: var(--color-gray-dark);
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  .coa-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .coa-header h1 {
+      font-size: 24px;
+    }
+  }
+</style>
