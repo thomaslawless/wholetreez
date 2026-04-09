@@ -1,0 +1,76 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img
+      src="/images/Logo Wholetreez White.png"
+      alt="WholeTreez"
+      class="hero-logo"
+    />
+    <p class="hero-tagline">Premium Cannabis &middot; New York</p>
+    <a href="/coa" class="hero-cta">View Lab Results</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/hero.jpg') center / cover no-repeat;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    padding: 48px 24px;
+  }
+
+  .hero-logo {
+    max-width: 320px;
+    margin: 0 auto 24px;
+  }
+
+  .hero-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hero-cta:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+    outline: 1px solid var(--color-white);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 60vh;
+    }
+
+    .hero-logo {
+      max-width: 240px;
+    }
+  }
+</style>
