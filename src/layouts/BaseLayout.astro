@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | WholeTreez</title>
+    <link rel="icon" type="image/png" href="/images/Logo Wholetreez W Black.png" />
+  </head>
+  <body>
+    <slot />
+    <footer class="footer">
+      <p>&copy; 2026 WholeTreez. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .footer {
+    margin-top: auto;
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-gray);
+    border-top: 1px solid #eee;
+  }
+</style>
