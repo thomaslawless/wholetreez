@@ -1,0 +1,66 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-logo">
+      <img src="/images/Logo Wholetreez line White.png" alt="WholeTreez" />
+    </a>
+    <div class="navbar-links">
+      <a href="/" class:list={[{ active: currentPath === '/' }]}>Home</a>
+      <a href="/coa" class:list={[{ active: currentPath === '/coa' || currentPath === '/coa/' }]}>COA</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-black);
+  }
+
+  .navbar-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  .navbar-logo img {
+    height: 24px;
+    width: auto;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .navbar-links a {
+    color: var(--color-gray-dark);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .navbar-links a:hover,
+  .navbar-links a.active {
+    color: var(--color-white);
+  }
+
+  @media (max-width: 768px) {
+    .navbar-links {
+      gap: 20px;
+    }
+
+    .navbar-links a {
+      font-size: 12px;
+    }
+  }
+</style>

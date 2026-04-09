@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
 
 interface Props {
   title: string;
@@ -17,6 +18,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" href="/images/Logo Wholetreez W Black.png" />
   </head>
   <body>
+    <Navbar />
     <slot />
     <footer class="footer">
       <p>&copy; 2026 WholeTreez. All rights reserved.</p>
